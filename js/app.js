@@ -8,7 +8,7 @@ var sidebarDict = {
 
 // used for home sequence animation
 var fadeDelay = 1700;
-var nextSeqDelay = 800;
+var nextSeqDelay = 1000;
 var currentDelay = 0;
 // used to store timeouts that may need to be cancelled
 var seqTimeouts = [];
