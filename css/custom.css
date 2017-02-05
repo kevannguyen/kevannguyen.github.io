@@ -38,8 +38,14 @@ body {
 
 /* SIDEBAR
 ============================================================================ */
+.menu {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #sidebar .button {
-    margin: 20px 20px 20px 20px;
+    margin: 20px 0px 20px 0px;
     text-align: center;
     font-size: 15px;
     font-weight: 700;
@@ -61,7 +67,7 @@ body {
 
 #side-icons {
     width: 200px;
-    margin: 0px 0px 20px 20px;
+    margin: 0px 0px 20px 0px;
 }
 
 .fa {
@@ -82,6 +88,10 @@ body {
 
 /* CONTENT
 ============================================================================ */
+#main-content {
+    min-height: 400px;
+}
+
 .content {
     padding: 50px 40px 40px 50px;
     margin: 0px 20px 0px 20px;
