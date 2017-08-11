@@ -1,6 +1,6 @@
 /* GENERAL */
 body {
-    background-color: #fbfefe;
+    background-color: #ffffff;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -18,7 +18,11 @@ body {
     /* background-color: lightcyan; */
     margin: auto;
     padding-bottom: 50px;
-    width: 493px;
+    text-align: center;
+}
+
+#menu > .navbar {
+    display: inline-block;
 }
 
 .navbar > li {
