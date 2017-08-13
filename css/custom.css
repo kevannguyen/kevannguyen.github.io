@@ -113,7 +113,7 @@ p, li {
     margin-bottom: 45px;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 768px) {
     #profile-pic {
         display: inline-block;
         float: left;
