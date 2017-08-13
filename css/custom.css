@@ -1,7 +1,16 @@
+/* Tablets 768px ... will prob do 640px tho*/
+
 /* GENERAL */
 body {
-    background-color: #ffffff;
+    background-color: #fcfcfc;
     font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 15px;
+    margin-bottom: 0.9em;
+    line-height: 1.35;
+    -webkit-margin-after: 0.9em;
 }
 
 /* HEADER */
@@ -9,7 +18,7 @@ body {
     /* background-color: lightcoral; */
     font-family: 'Shadows Into Light', cursive;
     font-size: 50px;
-    padding: 30px 30px 45px 30px;
+    padding: 60px 30px 70px 30px;
     text-align: center;
 }
 
@@ -17,7 +26,7 @@ body {
 #menu {
     /* background-color: lightcyan; */
     margin: auto;
-    padding-bottom: 50px;
+    padding-bottom: 65px;
     text-align: center;
 }
 
@@ -26,14 +35,11 @@ body {
 }
 
 .navbar > li {
-    float: left;
+    display: inline;
     font-family: 'Muli', sans-serif;
-    margin-left: 30px;
+    line-height: 1.7;
+    margin: 0px 15px;
     text-decoration: none;
-}
-
-.navbar > li:first-child {
-    margin-left: 0px;
 }
 
 .navbar > li > a {
@@ -45,28 +51,93 @@ body {
     color: #5e5e5e;
 }
 
-#menu + * {
-    clear: left;
+.navbar > li > a.selected {
+    color: #79a9b4;
+}
+
+@media screen and (max-width: 640px) {
+    #menu > .navbar {
+        width: 350px;
+    }
 }
 
 /* MAIN CONTENT */
 #main {
     /* background-color: lightgoldenrodyellow; */
-    padding: 40px 50px;
+    margin: auto;
+    padding: 30px;
+    width: 900px;
 }
+
+@media screen and (max-width: 960px) {
+    #main {
+        width: calc(100% - 60px);
+    }
+}
+
+/*** ABOUT PAGE ***/
+#profile-pic {
+    border-radius: 500px;
+    float: left;
+    margin-bottom: 150px;
+    margin-right: 45px;
+    width: 140px;
+}
+
+@media screen and (max-width: 640px) {
+    #profile-pic {
+        display: block;
+        float: none;
+        margin: auto;
+        margin-bottom: 45px;
+    }
+}
+
+/*** EXPERIENCE PAGE ***/
+
+
+
+/*** PROJECTS PAGE ***/
+
+
 
 /* FOOTER */
 #footer {
     /* background-color: lightgray; */
-    padding: 40px;
+    clear: both;
+    margin: auto;
+    padding: 60px 30px;
+    width: 900px;
 }
 
 #copyright {
     float: right;
     position: relative;
-    top: 7px;
+    top: -24px;
 }
 
 .fa {
     font-size: 28px;
+}
+
+@media screen and (max-width: 945px) {
+    #footer {
+        width: calc(100% - 60px);
+    }
+    
+    #footer > .navbar > li:first-child {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #footer {
+        text-align: center;
+    }
+    #footer > .navbar {
+        margin-bottom: 40px;
+    }
+    #copyright {
+        float: none;
+    }
 }
