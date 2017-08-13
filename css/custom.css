@@ -4,13 +4,46 @@
 body {
     background-color: #fcfcfc;
     font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    line-height: 1.35;
 }
 
-p {
-    font-size: 15px;
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 22px;
+    /* font-weight: bold; */
+}
+
+h3 {
+    font-size: 14px;
+}
+
+li {
+    list-style: disc;
+}
+
+p, li {
     margin-bottom: 0.9em;
-    line-height: 1.35;
+    /* line-height: 1.35; */
     -webkit-margin-after: 0.9em;
+}
+
+a {
+    color: #79a9b4;    
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5e5e5e;
+}
+
+img {
+    width: 140px;
 }
 
 /* HEADER */
@@ -81,7 +114,6 @@ p {
     float: left;
     margin-bottom: 150px;
     margin-right: 45px;
-    width: 140px;
 }
 
 @media screen and (max-width: 640px) {
@@ -98,7 +130,32 @@ p {
 
 
 /*** PROJECTS PAGE ***/
+.item-header {
+    margin-bottom: 10px;
+}
+.item > img {
+    margin-right: 30px;
+}
 
+.item > ul {
+    float: right;
+}
+
+.item > ul > li:last-child {
+    margin-bottom: 0em;
+    -webkit-margin-after: 0em;
+}
+
+#main > hr {
+    clear: right;
+    margin: 22px 0px 15px 0px;
+}
+
+/*** CONTACT PAGE ***/
+#main .contact-header {
+    font-size: 20px;
+    font-weight: bolder;
+}
 
 
 /* FOOTER */
@@ -110,23 +167,23 @@ p {
     width: 900px;
 }
 
-#copyright {
-    float: right;
-    position: relative;
-    top: -24px;
+#footer > .navbar > li:first-child {
+    margin-left: 0px;
 }
 
 .fa {
     font-size: 28px;
 }
 
+#copyright {
+    float: right;
+    position: relative;
+    top: -24px;
+}
+
 @media screen and (max-width: 945px) {
     #footer {
         width: calc(100% - 60px);
-    }
-    
-    #footer > .navbar > li:first-child {
-        margin-left: 0px;
     }
 }
 

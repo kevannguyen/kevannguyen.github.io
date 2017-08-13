@@ -34,16 +34,95 @@
         
         <!-- MAIN CONTENT -->
         <div id="main">
-            <img id="profile-pic" src="img/profile_pic.png" alt="Profile picture">
-            <div id="about-content">
-                <p>Hi, I'm Kevan.</p>
-                <p>lol go fk urself</p>
-                <p>Hi there, my name is Kevan. I am a third year Computer Science and Engineering          student attending UC Irvine.<br><br>
-                    
-                My time spent at the university has confirmed software engineering is truly the right path for me. It brings me joy whenever I solve a problem, and even more so if it is challenging. Whenever tasked with anything programming related, I like to jump straight to it -- not because it'll simply clear things for the day, but because it is so fun to do.<br><br>
-                    
-                Becoming a better me has always been my way of life. Whether it's becoming a better programmer or being a good friend, I am always for self-improvement. Any challenge I face that knocks me down, just know I'll be back up on my feet ready to take it on again.
-                </p>
+            <div class="item">
+                <div class = "item-header">
+                    <h1>Radio Control Vacuum Cleaner</h1>
+                    <h2>Arduino / C++</h2>
+                    <h3>August 2016</h3>
+                </div>
+                <img class="project_img" src="img/vacuum_bot.png">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=dmlWOtPn2n8" target="_blank">Video demonstration</a></li>
+                    <li><a href="https://github.com/kevannguyen/RC-Vacuum-Cleaner" target="_blank">Source code</a></li>
+                    <li>Investigated using Arduino UNO R3 for personal learning and interest</li>
+                    <li>Constructed remote control vacuum cleaner programmed in C++ with standard 
+                        car chassis kit and combination of passive/active electronic components</li>
+                    <li>Controlled vehicle movement and vacuum switch with the nRF24L01 RF 
+                        transceiver module implemented on a custom-made controller</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="item">
+                <div class = "item-header">
+                    <h1>Console-based Text Editor</h1>
+                    <h2>C++</h2>
+                    <h3>December 2015</h3>
+                </div>
+                <img class="project_img" src="img/text_editor.png">
+                <ul>
+                    <li><a href="https://github.com/kevannguyen/Console-based-Text-Editor" target="_blank">Source code</a></li>
+                    <li>Designed console-based text editor in C++ through modular object-oriented practices towards reusability</li>
+                    <li>Implemented basic functionality including text insertion, deletion, undo, and redo through polymorphism</li>
+                    <li>Adopted the use of stack data structure to facilitate undo and redo operations</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="item">
+                <div class = "item-header">
+                    <h1>Karnaugh Map Minimizer</h1>
+                    <h2>iOS</h2>
+                    <h3>August 2015</h3>
+                </div>
+                <img class="project_img" src="img/kmap.png">
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=5yLgn7XwC3c" target="_blank">Video demonstration</a></li>
+                    <li><a href="https://github.com/kevannguyen/Karnaugh-Map-Minimizer" target="_blank">Source code</a></li>
+                    <li>Created Karnaugh map minimizer app for iOS devices using Swift 2.0 to simplify boolean algebra expressions</li>
+                    <li>Reduced dynamically created Karnaugh maps of up to six variables and presented results graphically in tables</li>
+                    <li>Implemented with the Quine-McCluskey algorithm and Petrick's method</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="item">
+                <div class = "item-header">
+                    <h1>Othello</h1>
+                    <h2>Python</h2>
+                    <h3>March 2015</h3>
+                </div>
+                <img class="project_img" src="img/othello.png">
+                <ul>
+                    <li><a href="https://github.com/kevannguyen/Othello" target="_blank">Source code</a></li>
+                    <li>Built a 2-player Othello game and GUI using Python and the Tkinter module</li>
+                    <li>Supported various game settings and preferences, including board resizability and grid dimensions</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="item">
+                <div class = "item-header">
+                    <h1>MapQuest API</h1>
+                    <h2>Python</h2>
+                    <h3>February 2015</h3>
+                </div>
+                <img class="project_img" src="img/mapquest.png">
+                <ul>
+                    <li><a href="https://github.com/kevannguyen/MapQuest-API" target="_blank">Source code</a></li>
+                    <li>Utilized MapQuest's open data API to provide driving directions</li>
+                    <li>Parses data as JSON object and displays trip information among multiple locations from start to destination</li>
+                    <li>Offers step-by-step directions and trip stats (distance, estimated time, etc.)</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="item">
+                <div class = "item-header">
+                    <h1>Connect Four Game Network Client</h1>
+                    <h2>Python</h2>
+                    <h3>February 2015</h3>
+                </div>
+                <img class="project_img" src="img/connect4.png">
+                <ul>
+                    <li>Developed console-based Connect Four game client with network support in Python</li>
+                    <li>Implemented network communications following custom networking protocol specification</li>
+                </ul>
             </div>
         </div>
     
@@ -58,5 +137,7 @@
                 Copyright © 2017 Kevan Nguyen
             </div>
         </div>
+        <script src="js/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>
