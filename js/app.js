@@ -1,5 +1,4 @@
-$(document).ready(function() {
-    setInitialItemHeight();
+$(window).on("load", function() {
     setItemSize();
 });
 
@@ -28,16 +27,3 @@ function setItemSize() {
         $(item).height(newItemHeight);
     });
 }
-
-// Used in the 'EXPERIENCE' and 'PROJECTS' page.
-// Temp bug fix when setting size of item div.
-function setInitialItemHeight() {
-    $(".item").each(function(index, item) {
-        // Set item height
-        var headerHeight = $(item).children(".item-header").outerHeight(true),
-            imgHeight = $(item).children("img").outerHeight(true),
-            initialItemHeight = headerHeight + imgHeight;
-        $(item).height(initialItemHeight);
-    });
-}
-
