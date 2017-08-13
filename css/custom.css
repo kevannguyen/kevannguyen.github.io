@@ -3,7 +3,7 @@
 /* GENERAL */
 a {
     color: #79a9b4;    
-    font-weight: bolder;
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -155,7 +155,7 @@ p, li {
 /*** CONTACT PAGE ***/
 #main .contact-header {
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 
