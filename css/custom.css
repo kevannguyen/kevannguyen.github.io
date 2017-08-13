@@ -127,11 +127,13 @@ p, li {
     margin-bottom: 10px;
 }
 .item > img {
-    margin-right: 35px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
 }
 
 .item > ul {
-    float: right;
+    float: none;
 }
 
 .item > ul > li:last-child {
@@ -144,21 +146,21 @@ p, li {
     margin: 22px 0px 15px 0px;
 }
 
+@media screen and (min-width: 768px) {
+    .item > img {
+        display: inline-block;
+        margin: 0px;
+        margin-right: 35px;
+    }
+    .item > ul {
+        float: right;
+    }
+}
+
 /*** CONTACT PAGE ***/
 #main .contact-header {
     font-size: 20px;
     font-weight: bold;
-}
-
-@media screen and (max-width: 480px) {
-    .item > img {
-        display: block;
-        margin: auto;
-        margin-bottom: 10px;
-    }
-    .item > ul {
-        float: none;
-    }
 }
 
 /* FOOTER */
