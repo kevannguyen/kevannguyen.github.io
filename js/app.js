@@ -6,7 +6,7 @@ $(window).resize(function() {
     setItemSize();
 });
 
-// Used in the 'PROJECTS' page
+// Used in the 'EXPERIENCE' and 'PROJECTS' page
 // Ensures that the description is always to the right of the image,
 // even if description height exceeds the image.
 function setItemSize() {
