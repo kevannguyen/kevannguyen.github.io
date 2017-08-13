@@ -17,23 +17,21 @@ function setItemSize() {
             newDescriptionWidth = itemWidth - imgWidth;
         
         // Only set new description width if greater than 480 (typical phone size)
-        if ($(window).width() <= 480) 
-            $(item).children("ul").width(itemWidth);
-        else
+        $(item).children("ul").width(itemWidth);
+        if ($(window).width() >= 480)
             $(item).children("ul").width(newDescriptionWidth);
 
         // Set item height
         var headerHeight = $(item).children(".item-header").outerHeight(true),
             descriptionHeight = $(item).children("ul").outerHeight(true),
             imgHeight = $(item).children("img").outerHeight(true),
-            newItemHeight = headerHeight;
+            newItemHeight;
 
         // Set item height to height of all 3 (header, description, img) if
         // viewing on small viewport width of 480 (typical phone size)
-        if ($(window).width() <= 480)
-            newItemHeight += imgHeight + descriptionHeight;
-        else
-            newItemHeight += (imgHeight > descriptionHeight) ? imgHeight : descriptionHeight;
+        newItemHeight = headerHeight + imgHeight + descriptionHeight;
+        if ($(window).width() >= 480)
+            newItemHeight = (imgHeight > descriptionHeight) ? headerHeight + imgHeight : headerHeight + descriptionHeight;
 
         $(item).height(newItemHeight);
     });

@@ -95,28 +95,30 @@ p, li {
     margin: auto;
     padding: 30px;
     width: 900px;
+    width: calc(100% - 60px);
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 960px) {
     #main {
-        width: calc(100% - 60px);
+        width: 900px;
     }
 }
 
 /*** ABOUT PAGE ***/
 #profile-pic {
     border-radius: 500px;
-    float: left;
-    margin-bottom: 150px;
-    margin-right: 45px;
+    display: block;
+    float: none;
+    margin: auto;
+    margin-bottom: 45px;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 640px) {
     #profile-pic {
-        display: block;
-        float: none;
-        margin: auto;
-        margin-bottom: 45px;
+        display: inline-block;
+        float: left;
+        margin-bottom: 150px;
+        margin-right: 45px;
     }
 }
 
@@ -165,7 +167,12 @@ p, li {
     clear: both;
     margin: auto;
     padding: 60px 30px;
-    width: 900px;
+    text-align: center;
+    width: calc(100% - 60px);
+}
+
+#footer > .navbar {
+    margin-bottom: 40px;
 }
 
 #footer > .navbar > li:first-child {
@@ -181,25 +188,25 @@ p, li {
 }
 
 #copyright {
-    float: right;
+    float: none;
     position: relative;
     top: -24px;
 }
 
-@media screen and (max-width: 945px) {
+@media screen and (min-width: 945px) {
     #footer {
-        width: calc(100% - 60px);
+        width: 900px;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 500px) {
     #footer {
-        text-align: center;
+        text-align: left;
     }
     #footer > .navbar {
-        margin-bottom: 40px;
+        margin-bottom: 0px;
     }
     #copyright {
-        float: none;
+        float: right;
     }
 }
