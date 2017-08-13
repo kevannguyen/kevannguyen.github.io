@@ -1,6 +1,16 @@
 /* Tablets 768px ... will prob do 640px tho*/
 
 /* GENERAL */
+a {
+    color: #79a9b4;    
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #5e5e5e;
+}
+
 body {
     background-color: #fcfcfc;
     font-family: 'Roboto', sans-serif;
@@ -22,6 +32,10 @@ h3 {
     font-size: 14px;
 }
 
+img {
+    width: 140px;
+}
+
 li {
     list-style: disc;
 }
@@ -30,20 +44,6 @@ p, li {
     margin-bottom: 0.9em;
     /* line-height: 1.35; */
     -webkit-margin-after: 0.9em;
-}
-
-a {
-    color: #79a9b4;    
-    font-weight: bolder;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #5e5e5e;
-}
-
-img {
-    width: 140px;
 }
 
 /* HEADER */
