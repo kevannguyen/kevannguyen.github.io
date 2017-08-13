@@ -1,14 +1,15 @@
 $(window).on("load", function() {
     setItemSize();
+    setAboutContentWidth()
 });
 
 $(window).resize(function() {
     setItemSize();
+    setAboutContentWidth()
 });
 
-// Used in the 'EXPERIENCE' and 'PROJECTS' page.
-// Ensures that the description is always to the right of the image,
-// even if description height exceeds the image.
+// Used in the 'EXPERIENCE' and 'PROJECTS' page for
+// responsiveness on different devices.
 function setItemSize() {
     $(".item").each(function(index, item) {
         // Set width first (because width may affect height)
@@ -35,4 +36,20 @@ function setItemSize() {
 
         $(item).height(newItemHeight);
     });
+}
+
+// Used in the 'ABOUT' page for responsiveness on different devices.
+function setAboutContentWidth() {
+    var aboutMainDiv = $("#main.about");
+
+    if (aboutMainDiv) {
+        var mainWidth = aboutMainDiv.width();
+        var imgWidth = $("#profile-pic").outerWidth(true);
+        var newAboutContentWidth = mainWidth;
+
+        if ($(window).width() >= 640)
+            newAboutContentWidth -= imgWidth;
+
+        $("#about-content").width(newAboutContentWidth);
+    }
 }
