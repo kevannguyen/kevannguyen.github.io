@@ -172,6 +172,10 @@ p, li {
     margin-left: 0px;
 }
 
+#footer > .navbar > li:last-child {
+    margin-right: 0px;
+}
+
 .fa {
     font-size: 28px;
 }
