@@ -38,6 +38,7 @@ img {
 }
 
 li {
+    display: list-item;
     list-style: disc;
 }
 
@@ -135,7 +136,7 @@ p, li {
     margin-bottom: 10px;
 }
 .item > img {
-    margin-right: 30px;
+    margin-right: 35px;
 }
 
 .item > ul {
