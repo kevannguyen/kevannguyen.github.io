@@ -91,12 +91,6 @@ p, li {
     color: #79a9b4;
 }
 
-@media screen and (max-width: 640px) {
-    #menu > .navbar {
-        width: 350px;
-    }
-}
-
 /* MAIN CONTENT */
 #main {
     /* background-color: lightgoldenrodyellow; */
