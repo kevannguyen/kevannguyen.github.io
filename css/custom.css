@@ -121,6 +121,7 @@ p, li {
     }
     #about-content {
         float: right;
+        width: calc(100% - 189px);
     }
 }
 
@@ -156,6 +157,7 @@ p, li {
     }
     .item > ul {
         float: right;
+        width: calc(100% - 179px);
     }
 }
 
