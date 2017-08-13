@@ -16,9 +16,9 @@ function setItemSize() {
             itemWidth = $(item).outerWidth(true),
             newDescriptionWidth = itemWidth - imgWidth;
         
-        // Only set new description width if greater than 768px
+        // Only set new description width if greater than 640px
         $(item).children("ul").width(itemWidth);
-        if ($(window).width() >= 768)
+        if ($(window).width() >= 640)
             $(item).children("ul").width(newDescriptionWidth);
 
         // Set item height
@@ -28,9 +28,9 @@ function setItemSize() {
             newItemHeight;
 
         // Set item height to height of all 3 (header, description, img) if
-        // viewing on small viewport width (< 768px)
+        // viewing on small viewport width (< 640px)
         newItemHeight = headerHeight + imgHeight + descriptionHeight;
-        if ($(window).width() >= 768)
+        if ($(window).width() >= 640)
             newItemHeight = (imgHeight > descriptionHeight) ? headerHeight + imgHeight : headerHeight + descriptionHeight;
 
         $(item).height(newItemHeight);
