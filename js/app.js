@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    setInitialItemHeight();
     setItemSize();
 });
 
@@ -6,7 +7,7 @@ $(window).resize(function() {
     setItemSize();
 });
 
-// Used in the 'EXPERIENCE' and 'PROJECTS' page
+// Used in the 'EXPERIENCE' and 'PROJECTS' page.
 // Ensures that the description is always to the right of the image,
 // even if description height exceeds the image.
 function setItemSize() {
@@ -25,6 +26,18 @@ function setItemSize() {
         newItemHeight += (imgHeight > descriptionHeight) ? imgHeight : descriptionHeight;
 
         $(item).height(newItemHeight);
+    });
+}
+
+// Used in the 'EXPERIENCE' and 'PROJECTS' page.
+// Temp bug fix when setting size of item div.
+function setInitialItemHeight() {
+    $(".item").each(function(index, item) {
+        // Set item height
+        var headerHeight = $(item).children(".item-header").outerHeight(true),
+            imgHeight = $(item).children("img").outerHeight(true),
+            initialItemHeight = headerHeight + imgHeight;
+        $(item).height(initialItemHeight);
     });
 }
 
