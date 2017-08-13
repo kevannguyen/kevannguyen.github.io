@@ -24,8 +24,8 @@
         <!-- NAV BAR -->
         <div id="menu">
             <ul class="navbar">
-                <li><a href="index.html" class="selected">ABOUT</a></li>
-                <li><a href="experience.html">EXPERIENCE</a></li>
+                <li><a href="index.html">ABOUT</a></li>
+                <li><a href="experience.html" class="selected">EXPERIENCE</a></li>
                 <li><a href="projects.html">PROJECTS</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
                 <li><a href="doc/Kevan%20Nguyen%20Resume.pdf" target="_blank">RESUME</a></li>
@@ -34,19 +34,34 @@
         
         <!-- MAIN CONTENT -->
         <div id="main">
-            <img id="profile-pic" src="img/profile_pic.png" alt="Profile picture">
-            <div id="about-content">
-                <p>Hi, I'm Kevan.</p>
-                <p>Companion. Enthusiast. Thinker. A software developer.</p>
-                <p>San Francisco Bay Area. UC Irvine | Class of 2018.</p>
-                <p>
-                    Fond of music, art, traveling, calisthenics, gaming, 
-                    learning, good company, and most of all enjoying life as is.
-                </p>
-                <p>
-                    Seeking to be inspired, to envision the unlikely, to be surrounded by 
-                    those who bring the best in me, and to become a better me every day
-                </p>
+            <div class="item">
+                <div class = "item-header">
+                    <h1>Software Engineer Intern</h1>
+                    <h2>SS&amp;C Advent</h2>
+                    <h3>June 2017 — September 2017</h3>
+                </div>
+                <img src="img/advent_software.jpg">
+                <ul>
+                    <li>Worked primarily with the frontend team with occassional tasks for the backend</li>
+                    <li>Developed and configured generic/reusable app components with Knockout.js</li>
+                    <li>Created end-to-end integration tests with Nightwatch.js (Selenium wrapper) and unit tests with Jasmine</li>
+                    <li>Styled web pages with Sass to match product's style guide</li>
+                </ul>
+            </div>
+            <hr>
+            <div class="item">
+                <div class = "item-header">
+                    <h1>Python Tutor</h1>
+                    <h2>University of California, Irvine</h2>
+                    <h3>January 2015 — March 2015</h3>
+                </div>
+                <img src="img/uci_ics.png">
+                <ul>
+                    <li>Guided students towards enhancing their mastery of Python concepts</li>
+                    <li>Involved with the development of lesson plans on specific topics in ICS 31</li>
+                    <li>Observed improvement in students throughout the quarter and received 94% student approval with an average
+                    rating of 8.83 / 10</li>
+                </ul>
             </div>
         </div>
     
@@ -61,5 +76,7 @@
                 Copyright © 2017 Kevan Nguyen
             </div>
         </div>
+        <script src="js/vendor/jquery/jquery-3.2.1.min.js"></script>
+        <script src="js/app.js"></script>
     </body>
 </html>

@@ -1,78 +1,30 @@
-// sidebar mappings with id
-var sidebarDict = {
-    "side-home" : "#home",
-    "side-about" : "#about",
-    "side-projects" : "#projects",
-    "side-contact" : "#contact",
-};
+$(document).ready(function() {
+    setItemSize();
+});
 
-// used for home sequence animation
-var fadeDelay = 1700;
-var nextSeqDelay = 1000;
-var currentDelay = 0;
-// used to store timeouts that may need to be cancelled
-var seqTimeouts = [];
+$(window).resize(function() {
+    setItemSize();
+});
 
-// shows content based on id
-function contentShow(nameId) {
-    $("#main-content").children().hide();
-    $(nameId).show();
-}
+// Used in the 'PROJECTS' page
+// Ensures that the description is always to the right of the image,
+// even if description height exceeds the image.
+function setItemSize() {
+    $(".item").each(function(index, item) {
+        // Set width first (because width may affect height)
+        var imgWidth = $(item).children("img").outerWidth(true),
+            itemWidth = $(item).outerWidth(true),
+            newDescriptionWidth = itemWidth - imgWidth;
+        $(item).children("ul").width(newDescriptionWidth);
 
-// runs the sequence animation of the "home" content
-function homeSequence(initialDelay) {
-    // hide all children first
-    $("#main-content").children().hide();
-    // set current delay
-    currentDelay = initialDelay;
-    // hide all children first
-    $("#home-sequence").children().hide();
-    // remove all "fadeOutLeft" in the children
-    $("#home-sequence").children().removeClass("fadeOutLeft");
-    // stop all the current timeouts and then clear it
-    for (var i = 0; i < seqTimeouts.length; i++) {
-        clearTimeout(seqTimeouts[i]);
-    }
-    seqTimeouts = [];
-    // show the home content
-    $("#home").show();
-    
-    // iterate through each sequence 
-    $("#home-sequence > .sequence").each(function(index) {
-        var currentSeq = $("#home-sequence > .sequence").eq(index);
-        
-        // fade in from right
-        seqTimeouts.push(setTimeout(function() {
-            currentSeq.show();
-        }, currentDelay));
-        
-        currentDelay += fadeDelay;
-        if (index < $("#home-sequence > .sequence").length - 1){
-            // fade out to left
-            seqTimeouts.push(setTimeout(function() {
-                currentSeq.addClass("fadeOutLeft"); 
-                seqTimeouts.push(setTimeout(function() {
-                    currentSeq.hide();
-                }, 800));
-            }, currentDelay));
-        }
-        currentDelay += nextSeqDelay;
+        // Set item height
+        var headerHeight = $(item).children(".item-header").outerHeight(true),
+            descriptionHeight = $(item).children("ul").outerHeight(true),
+            imgHeight = $(item).children("img").outerHeight(true),
+            newItemHeight = headerHeight;
+        newItemHeight += (imgHeight > descriptionHeight) ? imgHeight : descriptionHeight;
+
+        $(item).height(newItemHeight);
     });
 }
 
-/* BUTTON TRANSITIONS
-============================================================================ */
-$("#side-about, #side-projects, #side-contact").click(function() {
-    contentShow(sidebarDict[this.id]);
-});
-
-$("#side-home").click(function() {
-    homeSequence(100);
-});
-
-
-/* ON LOAD
-============================================================================ */
-$(document).ready(function() {
-    homeSequence(2450);
-});
