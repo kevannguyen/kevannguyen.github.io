@@ -94,13 +94,13 @@ p, li {
     /* background-color: lightgoldenrodyellow; */
     margin: auto;
     padding: 30px;
-    width: 900px;
+    width: 920px;
     width: calc(100% - 60px);
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 980px) {
     #main {
-        width: 900px;
+        width: 920px;
     }
 }
 
@@ -199,9 +199,9 @@ p, li {
     top: -24px;
 }
 
-@media screen and (min-width: 945px) {
+@media screen and (min-width: 980px) {
     #footer {
-        width: 900px;
+        width: 920px;
     }
 }
 
